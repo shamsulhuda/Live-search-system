@@ -33,7 +33,7 @@
         </div>
         <div class="modal-body">
 
-          <form action="create.new" method="POST">
+		<form action="{{route('create.new')}}" method="POST">
           	@csrf
 
 			  <div class="form-group">
@@ -64,12 +64,11 @@
 
 		<div class="row">
 
-			
-				<button type="button" class="btn btn-info btn-sm btn-float-right" data-toggle="modal" data-target="#myModal">Insert Data</button>
+				<button type="button" class="btn btn-info btn-sm btn-float-right mt-4" data-toggle="modal" data-target="#myModal">Insert Data</button>
 
-
-				
-
+		</div>
+		<div class="alert alert-primary" role="alert">
+			{{Session::get('success')}}
 		</div>
 
 	</div>
